@@ -1,0 +1,9 @@
+.navbar {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary {
+    background-color: rgb(163, 99, 168);
+}
