@@ -24,24 +24,16 @@ export const Login = () => {
     actions.createUser(nameNew, emailNew, passwordNew);
   };
 
-
   // Si handleCkick devuelve el token se ejecuta el redericcionamiento
 
   useEffect(() => {
     if (store.token && store.token != "" && store.token != undefined)
       history(`/${store.name}`);
-  }, [store.token])
-
-
+  }, [store.token]);
 
   return (
-
-
     <>
-
-
       <div className="login-form-container">
-
         <div className="row row-form text-center">
           <div className="col-md-12 col-lg-6">
             <h1> Login </h1>
@@ -61,20 +53,14 @@ export const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-
               </div>
               <div className="col-12">
                 <button onClick={handleClick}> Login </button>
-
               </div>
-
-
-
             </div>
           </div>
 
           <div className="col-md-12 col-lg-6">
-
             <h1> Create </h1>
             <div className="create-form">
               <div className="col-12">
@@ -84,7 +70,6 @@ export const Login = () => {
                   value={nameNew}
                   onChange={(e) => setNameNew(e.target.value)}
                 />
-
               </div>
               <div className="col-12">
                 <input
@@ -93,7 +78,6 @@ export const Login = () => {
                   value={emailNew}
                   onChange={(e) => setEmailNew(e.target.value)}
                 />
-
               </div>
               <div className="col-12">
                 <input
@@ -102,25 +86,14 @@ export const Login = () => {
                   value={passwordNew}
                   onChange={(e) => setPasswordNew(e.target.value)}
                 />
-
               </div>
               <div className="col-12">
                 <button onClick={createUser}> Create </button>
               </div>
-
-
-
-
             </div>
           </div>
-
         </div>
       </div>
-
-
-
     </>
-
   );
 };
-
